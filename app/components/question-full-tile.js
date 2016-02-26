@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   answerFormShowing: false,
-
+  
   actions: {
     showAnswerForm() {
       this.set('answerFormShowing', true);
