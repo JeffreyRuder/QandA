@@ -1,5 +1,5 @@
 <div class="rendered-question-full">
-  <small class="small-question-info">Question asked by {{question.question_author}} &bull; {{moment-format question.timestamp}}</small><br>
+  <small class="small-question-info">Question asked by {{question.question_author}} &bull; {{moment-calendar question.timestamp}}</small><br>
   {{#link-to 'question' question.id}}<span class="rendered-question-text">{{question.question_text}}</span>{{/link-to}}
   <p class="rendered-question-notes">
     {{question.notes}}&nbsp;
