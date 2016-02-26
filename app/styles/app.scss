@@ -60,6 +60,28 @@ $red: #b92b27;
 
 .rendered-question-answers {
   margin-top: 20px;
+
+  .answer-author {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $nearblack;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .rendered-answer-notes {
+    color: $nearblack;
+    font-size: 15px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .small-answer-info {
+    color: $lightgray;
+  }
+
+  .answer-number {
+    margin-top: 40px;
+    margin-bottom: -10px;
+  }
 }
 
 // Collapse navbar a little sooner than Bootstrap default

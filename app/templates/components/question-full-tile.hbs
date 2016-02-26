@@ -16,7 +16,7 @@
       </div>
       <div class="form-group">
         <label for="answer_text">Answer</label>
-        {{textarea value=answer_text class="form-control" id="answer_text" placeholder="Answer" required=true maxlength="100"}}
+        {{textarea value=answer_text class="form-control" id="answer_text" placeholder="Answer" required=true maxlength="500"}}
       </div>
       <button class="btn btn-default" type="submit">Submit</button>
     </form>
@@ -24,6 +24,9 @@
 </div>
 
 <div class="rendered-question-answers">
-  {{answerNumber question}}
+  <h4 class="answer-number">{{question.answers.length}}&nbsp;Answers</h4>
   <hr>
+  {{#each question.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
 </div>
