@@ -9,10 +9,12 @@ $screen-lg-min: 1200px;
 $lightblue: rgb(241, 248, 251);
 $darkblue: rgb(43, 109, 173);
 $lightgray: rgb(155, 155, 155);
+$mediumgray: rgb(88, 90, 97);
 $nearblack: rgb(51, 51, 51);
 $red: #b92b27;
 
 .navbar-default {
+  background: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-top: 2px solid $red;
   border-bottom: 1px solid #ddd;
@@ -27,6 +29,10 @@ $red: #b92b27;
 
   td {
     padding: 5px;
+  }
+
+  .btn {
+    color: $mediumgray;
   }
 }
 
