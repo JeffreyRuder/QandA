@@ -15,16 +15,22 @@
         <button class="btn btn-default" {{action "submitQuestion"}}>Ask Question</button>
       </td>
       <td>
-        <button class="btn btn-default"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
+        {{#if detailsShowing}}
+          <button class="btn btn-default" {{action "hideDetails"}}><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></button>
+        {{else}}
+          <button class="btn btn-default" {{action "showDetails"}}><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
+        {{/if}}
       </td>
     </tr>
-    <tr hidden>
+    <tr>
       <td>
       </td>
       <td>
-        <div class="form-group">
-          {{input value=question_text class="form-control" placeholder="Details"}}
-        </div>
+        {{#if detailsShowing}}
+          <div class="form-group">
+            {{textarea value=notes class="form-control" placeholder="Details"}}
+          </div>
+        {{/if}}
       </td>
     </tr>
   </table>

@@ -1,5 +1,15 @@
-<small class="small-question-info">Question asked by {{question.question_author}} &bull; {{moment-format question.timestamp}}</small><br>
-<span class="rendered-question-text">{{question.question_text}}</span>
-<p class="rendered-question-notes">
-  {{question.notes}}
-</p>
+<div class="rendered-question-basic">
+  <small class="small-question-info">Question asked by {{question.question_author}} &bull; {{moment-format question.timestamp}}</small><br>
+  <span class="rendered-question-text">{{question.question_text}}</span>
+  <p class="rendered-question-notes">
+    {{#if fullNotesShowing}}
+      {{question.notes}}
+      {{else}}
+        {{question.notes_preview}}
+        {{#if question.notes_areLong}}
+          ...&nbsp;<span class="btn-link" {{action 'showFullNotes'}}>(more)</span>
+        {{/if}}
+    {{/if}}
+  </p>
+  <hr>
+</div>

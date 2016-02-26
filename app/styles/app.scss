@@ -6,6 +6,8 @@ $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
+$lightgray: rgb(155, 155, 155);
+$nearblack: rgb(51, 51, 51);
 $red: #b92b27;
 
 .navbar-default {
@@ -18,5 +20,50 @@ $red: #b92b27;
     color: $red;
     font-family: "Bree Serif", serif;
     font-weight: bold;
+    margin-top: 5px;
+  }
+
+  td {
+    padding: 5px;
+  }
+}
+
+.small-question-info {
+  color: $lightgray;
+}
+
+.rendered-question-basic {
+  .rendered-question-text {
+    color: $nearblack;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .rendered-question-notes {
+    color: $nearblack;
+    font-size: 15px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .btn-link {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+// Collapse navbar a little sooner than Bootstrap default
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-collapse.collapse {
+      display: none !important;
+  }
+  .navbar-collapse.collapse.in {
+      display: block !important;
+  }
+  .navbar-header .collapse, .navbar-toggle {
+      display:block !important;
+  }
+  .navbar-header {
+      float:none;
   }
 }
