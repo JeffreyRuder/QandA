@@ -2,8 +2,25 @@
   <small class="small-question-info">Question asked by {{question.question_author}} &bull; {{moment-format question.timestamp}}</small><br>
   {{#link-to 'question' question.id}}<span class="rendered-question-text">{{question.question_text}}</span>{{/link-to}}
   <p class="rendered-question-notes">
-    {{question.notes}}
+    {{question.notes}}&nbsp;
+    <button class="btn btn-link" {{action 'showEditForm'}}>(edit)</button>
   </p>
+
+  {{#if editFormShowing}}
+    <form class="edit-form" {{action 'submitEdit' question on='submit'}}>
+      <div class="form-group">
+        <label for="edit_question_text">Question</label>
+        <{{input value=edit_question_text class="form-control" id="edit_question_text" placeholder=question.question_text}}
+      </div>
+      <div class="form-group">
+        <label for="edit_notes">Details</label>
+        {{textarea value=edit_notes class="form-control" id="edit_notes" placeholder=question.notes maxlength="500"}}
+      </div>
+      <button class="btn btn-default" type="submit">Submit</button>
+    </form>
+
+  {{/if}}
+
   <hr>
   <h4>Can you answer this question?</h4>
   <button class="btn btn-default" {{action 'showAnswerForm'}}>Answer</button>

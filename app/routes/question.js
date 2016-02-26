@@ -9,11 +9,23 @@ export default Ember.Route.extend({
     submitAnswer(params) {
       var self = this;
       var newAnswer = this.store.createRecord('answer', params);
-      var thisQuestion = params.question;
+      var question = params.question;
       newAnswer.save().then(function() {
-        return thisQuestion.save().then(function() {
-          self.transitionTo('question', thisQuestion);
+        return question.save().then(function() {
+          self.transitionTo('question', question);
         });
+      });
+    },
+
+    submitEdit(question, params) {
+      var self = this;
+      Object.keys(params).forEach(function(key) {
+        if (params[key] !== undefined) {
+          question.set(key, params[key]);
+        }
+      });
+      question.save().then(function() {
+        self.transitionTo('question', question);
       });
     }
   }
