@@ -10,7 +10,6 @@ export default Ember.Component.extend({
         timestamp: Date.now(),
         notes: null
       }
-      console.log(params);
       this.sendAction('submitQuestion', params);
     }
   }

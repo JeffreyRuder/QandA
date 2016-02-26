@@ -1,7 +1,31 @@
 <form class="navbar-form navbar-left">
-  <div class="form-group">
-    {{input value=question_author class="form-control" placeholder="Name"}}
-    {{input value=question_text class="form-control" placeholder="Question"}}
-  </div>
-  <button class="btn btn-default" {{action "submitQuestion"}}>Ask Question</button>
+  <table>
+    <tr>
+      <td>
+        <div class="form-group">
+          {{input value=question_author class="form-control" placeholder="Name"}}
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          {{input value=question_text class="form-control" placeholder="Question"}}
+        </div>
+      </td>
+      <td>
+        <button class="btn btn-default" {{action "submitQuestion"}}>Ask Question</button>
+      </td>
+      <td>
+        <button class="btn btn-default"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
+      </td>
+    </tr>
+    <tr hidden>
+      <td>
+      </td>
+      <td>
+        <div class="form-group">
+          {{input value=question_text class="form-control" placeholder="Details"}}
+        </div>
+      </td>
+    </tr>
+  </table>
 </form>
