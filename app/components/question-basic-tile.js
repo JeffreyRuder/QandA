@@ -6,6 +6,6 @@ export default Ember.Component.extend({
   actions: {
     showFullNotes() {
       this.set('fullNotesShowing', true);
-    }
+    },
   }
 });

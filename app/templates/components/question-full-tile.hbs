@@ -18,7 +18,7 @@
       </div>
       <div class="form-group">
         <label for="edit_notes">Details</label>
-        {{textarea value=edit_notes class="form-control" id="edit_notes" placeholder=question.notes maxlength="500"}}
+        {{textarea value=edit_notes class="form-control" id="edit_notes" placeholder=question.notes}}
       </div>
       <button class="btn btn-default" type="submit">Submit</button>
     </form>
@@ -48,7 +48,7 @@
   {{/if}}
 </div>
 
-<div class="rendered-question-answers">
+<div class="rendered-question-answers" id="answers-start">
   <h4 class="answer-number">{{question.answers.length}}&nbsp;Answers</h4>
   <hr>
   {{#each sortedAnswers as |answer|}}

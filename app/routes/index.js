@@ -14,6 +14,6 @@ export default Ember.Route.extend(InfinityRoute, {
       newQuestion.save().then(function() {
         self.refresh();
       });
-    }
+    },
   }
 });

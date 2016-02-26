@@ -11,5 +11,8 @@
         {{/if}}
     {{/if}}
   </p>
+  {{#link-to 'question' question}}
+    <small class="small-question-info">{{question.answers.length}}&nbsp;Answers</small>
+  {{/link-to}}
   <hr>
 </div>
