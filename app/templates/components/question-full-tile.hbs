@@ -51,7 +51,7 @@
 <div class="rendered-question-answers">
   <h4 class="answer-number">{{question.answers.length}}&nbsp;Answers</h4>
   <hr>
-  {{#each question.answers as |answer|}}
+  {{#each sortedAnswers as |answer|}}
     {{answer-tile answer=answer upvote='upvote'}}
   {{/each}}
 </div>

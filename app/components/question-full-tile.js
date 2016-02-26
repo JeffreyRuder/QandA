@@ -4,6 +4,9 @@ export default Ember.Component.extend({
   answerFormShowing: false,
   editFormShowing: false,
 
+  sortProperties: ['upvotes:desc'],
+  sortedAnswers: Ember.computed.sort('question.answers', 'sortProperties'),
+
   actions: {
     showAnswerForm() {
       this.set('answerFormShowing', true);
