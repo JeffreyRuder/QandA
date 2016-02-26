@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   answerFormShowing: false,
   editFormShowing: false,
+  upvotedAlready: false,
 
   sortProperties: ['upvotes:desc'],
   sortedAnswers: Ember.computed.sort('question.answers', 'sortProperties'),
@@ -50,6 +51,7 @@ export default Ember.Component.extend({
     },
 
     upvote(answer) {
+      this.set('upvotedAlready', true);
       this.sendAction('upvote', answer);
     }
   }

@@ -52,6 +52,6 @@
   <h4 class="answer-number">{{question.answers.length}}&nbsp;Answers</h4>
   <hr>
   {{#each sortedAnswers as |answer|}}
-    {{answer-tile answer=answer upvote='upvote'}}
+    {{answer-tile upvotedAlready=upvotedAlready answer=answer upvote='upvote'}}
   {{/each}}
 </div>

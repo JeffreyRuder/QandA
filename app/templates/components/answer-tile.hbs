@@ -5,7 +5,11 @@
   </p>
   <small class="small-answer-info">{{moment-calendar answer.timestamp}}</small>
   <div class="row answer-bottom">
-    <button class="btn btn-default" {{action 'upvote' answer}}>Upvote | {{answer.upvotes}}</button>
+    {{#unless upvotedAlready}}
+      <button class="btn btn-default" {{action 'upvote' answer}}>Upvote | {{answer.upvotes}}</button>
+    {{else}}
+      <button class="btn btn-default" disabled>Upvote | {{answer.upvotes}}</button>
+    {{/unless}}
   </div>
 </div>
 <hr>
