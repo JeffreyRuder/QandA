@@ -52,6 +52,12 @@ $red: #b92b27;
   }
 }
 
+.rendered-question-full {
+  .answer-form {
+    margin-top: 20px;
+  }
+}
+
 // Collapse navbar a little sooner than Bootstrap default
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar-collapse.collapse {
