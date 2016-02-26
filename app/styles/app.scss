@@ -1,5 +1,7 @@
 @import "bootstrap";
 
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
@@ -11,9 +13,10 @@ $red: #b92b27;
   border-top: 2px solid $red;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 3px 2px -2px rgba(200, 200 ,200, 0.2);
-}
 
-.navbar-default .navbar-brand {
-  color: $red;
-  font-weight: 400;
+  .navbar-brand {
+    color: $red;
+    font-family: "Bree Serif", serif;
+    font-weight: bold;
+  }
 }
