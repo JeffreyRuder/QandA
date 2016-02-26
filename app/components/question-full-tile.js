@@ -9,8 +9,16 @@ export default Ember.Component.extend({
       this.set('answerFormShowing', true);
     },
 
+    hideAnswerForm() {
+      this.set('answerFormShowing', false);
+    },
+
     showEditForm() {
       this.set('editFormShowing', true);
+    },
+
+    hideEditForm() {
+      this.set('editFormShowing', false);
     },
 
     submitEdit(question) {
@@ -29,12 +37,17 @@ export default Ember.Component.extend({
         answer_author: this.get('answer_author'),
         answer_text: this.get('answer_text'),
         question: this.get('question'),
-        timestamp: Date.now()
+        timestamp: Date.now(),
+        upvotes: 0
       };
       this.set('answerFormShowing', false);
       this.set('answer_author', undefined);
       this.set('answer_text', undefined);
       this.sendAction('submitAnswer', params);
+    },
+
+    upvote(answer) {
+      this.sendAction('upvote', answer);
     }
   }
 });

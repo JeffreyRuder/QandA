@@ -1,6 +1,10 @@
-<p class="answer-author">{{answer.answer_author}}</p>
-<p class="rendered-answer-notes">
-  {{answer.answer_text}}
-</p>
-<small class="small-answer-info">{{moment-calendar answer.timestamp}}</small>
+<div class="answer-all">
+  <p class="rendered-answer-notes">
+    {{answer.answer_text}}
+  </p>
+  <small class="small-answer-info">{{moment-calendar answer.timestamp}}</small>
+  <div class="row answer-bottom">
+    <button class="btn btn-default" {{action 'upvote' answer}}>Upvote | {{answer.upvotes}}</button>
+  </div>
+</div>
 <hr>

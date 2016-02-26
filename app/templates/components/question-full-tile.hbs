@@ -3,7 +3,11 @@
   {{#link-to 'question' question.id}}<span class="rendered-question-text">{{question.question_text}}</span>{{/link-to}}
   <p class="rendered-question-notes">
     {{question.notes}}&nbsp;
-    <button class="btn btn-link" {{action 'showEditForm'}}>(edit)</button>
+    {{#if editFormShowing}}
+      <button class="btn btn-link" {{action 'hideEditForm'}}>(hide)</button>
+    {{else}}
+      <button class="btn btn-link" {{action 'showEditForm'}}>(edit)</button>
+    {{/if}}
   </p>
 
   {{#if editFormShowing}}
@@ -23,7 +27,11 @@
 
   <hr>
   <h4>Can you answer this question?</h4>
-  <button class="btn btn-default" {{action 'showAnswerForm'}}>Answer</button>
+  {{#if answerFormShowing}}
+    <button class="btn btn-default" {{action 'hideAnswerForm'}}>Hide</button>
+  {{else}}
+    <button class="btn btn-default" {{action 'showAnswerForm'}}>Answer</button>
+  {{/if}}
 
   {{#if answerFormShowing}}
     <form class="answer-form" {{action 'submitAnswer' on='submit'}}>
@@ -44,6 +52,6 @@
   <h4 class="answer-number">{{question.answers.length}}&nbsp;Answers</h4>
   <hr>
   {{#each question.answers as |answer|}}
-    {{answer-tile answer=answer}}
+    {{answer-tile answer=answer upvote='upvote'}}
   {{/each}}
 </div>

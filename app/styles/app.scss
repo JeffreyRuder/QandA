@@ -6,6 +6,8 @@ $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
+$lightblue: rgb(241, 248, 251);
+$darkblue: rgb(43, 109, 173);
 $lightgray: rgb(155, 155, 155);
 $nearblack: rgb(51, 51, 51);
 $red: #b92b27;
@@ -25,6 +27,17 @@ $red: #b92b27;
 
   td {
     padding: 5px;
+  }
+}
+
+.index-header {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $nearblack;
+  font-size: 15px;
+  font-weight: 500;
+
+  hr {
+    margin-top: 10px;
   }
 }
 
@@ -55,6 +68,21 @@ $red: #b92b27;
 .rendered-question-full {
   .answer-form {
     margin-top: 20px;
+  }
+}
+
+.answer-all {
+  .answer-bottom {
+    margin-top: 10px;
+    position: relative;
+    left: 13px;
+
+    .btn {
+      background: $lightblue;
+      color: $darkblue;
+      font-weight: 500;
+      padding: 4px 10px 4px 7px;
+    }
   }
 }
 
