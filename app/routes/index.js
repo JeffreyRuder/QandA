@@ -1,11 +1,10 @@
 import Ember from 'ember';
+import InfinityRoute from 'ember-infinity/mixins/route';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(InfinityRoute, {
 
   model() {
-    return this.store.findAll('question', {reload: true}).then(function(questions) {
-      return questions.sortBy('timestamp').reverse();
-    });
+    return this.infinityModel('question', { perPage: 6, startingPage: 1, orderBy: 'neg_timestamp'});
   },
 
   actions: {

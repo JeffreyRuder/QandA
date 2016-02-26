@@ -20,13 +20,14 @@ export default Ember.Component.extend({
         notes_preview: null,
         notes_areLong: false,
         timestamp: Date.now(),
+        neg_timestamp: -1 * Date.now()
       };
 
       if (this.get('notes')) {
         params.notes_preview = this.get('notes').substring(0, 100);
         params.notes_areLong = (this.get('notes').length > 100);
       };
-      
+
       this.set('detailsShowing', false);
       this.set('question_author', undefined);
       this.set('question_text', undefined);
