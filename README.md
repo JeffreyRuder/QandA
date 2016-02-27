@@ -20,6 +20,7 @@ Ember.js, Ember Date, Emberfire, Firebase, JavaScript, ember-moment and moment.j
 * Sorted question feed on index page.
 * Users can add and edit questions and add answers.
 * Users can upvote posts and answers are sorted by upvotes.
+* Infinity scrolling implemented on index.
 
 ## Limitations
 
