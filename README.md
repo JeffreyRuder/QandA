@@ -9,9 +9,9 @@ It demonstrates use of routes, components, and models in Ember.js, use of Ember 
 
 Ember.js, Ember Date, Emberfire, Firebase, JavaScript, ember-moment and moment.js, Bootstrap, SASS.
 
-## Current Deployment
+## Demo
 
-[Q&A](https://mysterious-hollows-36189.herokuapp.com/) is deployed to Heroku at `https://mysterious-hollows-36189.herokuapp.com/`
+View a demo on [Heroku](http://quora-clone-app.herokuapps.com)
 
 ## Features
 
