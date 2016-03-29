@@ -11,7 +11,7 @@ Ember.js, Ember Date, Emberfire, Firebase, JavaScript, ember-moment and moment.j
 
 ## Demo
 
-View a demo on [Heroku](http://quora-clone-app.herokuapps.com)
+View a demo on [Heroku](http://quora-clone-app.herokuapp.com)
 
 ## Features
 
